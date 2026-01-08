@@ -201,6 +201,13 @@ public class Controller : MonoBehaviour
             {
                 ChangeWeapon(m_CurrentWeapon + 1);
             }
+
+            //Slide function
+            if (Input.GetButtonDown("Slide"))
+            {
+                move = move * (usedSpeed + 30);
+                move = transform.TransformDirection(move);
+            }
             
             //Key input to change weapon
 
